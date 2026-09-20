@@ -1,0 +1,12 @@
+App login:
+Email: admin@inventory.local
+Password: admin123
+
+
+
+.env
+
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_mysql_password
+DB_NAME=inventory_db
