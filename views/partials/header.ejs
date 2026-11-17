@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/charts.css">
 </head>
 <body>
   <div class="app-shell">
@@ -15,6 +16,9 @@
       <a class="brand" href="/"><span class="brand-mark">+</span><span>Inventory<br><b>Desk</b></span></a>
       <p class="nav-label">Workspace</p>
       <nav>
+        <% if (user && user.role === 'supplier') { %>
+        <a class="nav-link <%= path === '/supplier' ? 'active' : '' %>" href="/supplier"><span>▦</span> Supplier workspace</a>
+        <% } else { %>
         <a class="nav-link <%= path === '/' ? 'active' : '' %>" href="/"><span>▦</span> Overview</a>
         <a class="nav-link <%= path === '/products' ? 'active' : '' %>" href="/products"><span>□</span> Products</a>
         <a class="nav-link <%= path === '/categories' ? 'active' : '' %>" href="/categories"><span>◈</span> Categories</a>
@@ -23,6 +27,7 @@
         <a class="nav-link <%= path === '/purchases' ? 'active' : '' %>" href="/purchases"><span>↓</span> Purchases</a>
         <a class="nav-link <%= path === '/sales' ? 'active' : '' %>" href="/sales"><span>↑</span> Sales</a>
         <a class="nav-link <%= path === '/reports' ? 'active' : '' %>" href="/reports"><span>◫</span> Reports</a>
+        <% } %>
       </nav>
       <div class="sidebar-foot"><span class="status-dot"></span> System operational</div>
     </aside>
@@ -32,3 +37,6 @@
         <div class="user-menu"><span class="avatar"><%= user ? user.name.charAt(0) : 'A' %></span><span><b><%= user ? user.name : 'Admin' %></b><small><%= user ? user.role : 'admin' %></small></span><form action="/logout" method="post"><button class="icon-button" title="Sign out">↪</button></form></div>
       </header>
       <div class="page-content">
+        <% if (hasDemoData) { %>
+        <aside class="report-source-note">Illustrative demo dataset only. Supplier, purchase, sales, and stock records are generated examples, not verified business records.</aside>
+        <% } %>

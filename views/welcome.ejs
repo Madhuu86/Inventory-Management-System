@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#202a22">
+  <title>Welcome | Inventory Desk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/welcome.css">
+</head>
+<body class="welcome-page">
+  <div class="welcome-shell">
+    <header class="welcome-header">
+      <a class="welcome-brand" href="/" aria-label="Inventory Desk home">
+        <span class="welcome-brand-mark">ID</span>
+        <span>Inventory <b>Desk</b></span>
+      </a>
+      <a class="button primary welcome-signin" href="/login">Sign in <span aria-hidden="true">→</span></a>
+    </header>
+
+    <main>
+      <section class="welcome-hero" aria-labelledby="welcome-title">
+        <div class="welcome-copy">
+          <p class="eyebrow">Inventory management system</p>
+          <h1 id="welcome-title">Welcome to<br><span>Inventory Desk</span></h1>
+          <p class="welcome-description">A central place to manage products, track stock, coordinate suppliers, and understand sales.</p>
+          <a class="button primary welcome-action" href="/login">Open the project <span aria-hidden="true">→</span></a>
+          <p class="welcome-caption">Inventory, organized from one workspace.</p>
+        </div>
+
+        <div class="welcome-visual" aria-hidden="true">
+          <div class="visual-topline"><span></span><span></span><span></span></div>
+          <div class="visual-heading">
+            <div><small>INVENTORY OVERVIEW</small><strong>Stock at a glance</strong></div>
+            <span class="visual-status">LIVE</span>
+          </div>
+          <div class="visual-stats">
+            <div><small>Products</small><b>Tracked</b></div>
+            <div><small>Operations</small><b>Connected</b></div>
+          </div>
+          <div class="visual-chart">
+            <div class="chart-lines"><i></i><i></i><i></i><i></i></div>
+            <div class="chart-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="visual-footer"><span>PRODUCTS</span><span>SUPPLIERS</span><span>SALES</span></div>
+        </div>
+      </section>
+
+      <section class="welcome-team" aria-labelledby="team-title">
+        <div class="team-intro">
+          <p class="eyebrow">Project team</p>
+          <h2 id="team-title">Built by</h2>
+        </div>
+        <div class="team-members">
+          <article class="team-member">
+            <span class="member-number">01</span>
+            <div><small>Project member</small><h3>MADHU V</h3></div>
+          </article>
+          <article class="team-member">
+            <span class="member-number">02</span>
+            <div><small>Project member</small><h3>BHARATH S SHET</h3></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="welcome-footer">
+      <span>Inventory Desk</span>
+      <span>Inventory Management System</span>
+    </footer>
+  </div>
+</body>
+</html>
